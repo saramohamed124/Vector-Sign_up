@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+i{
+    font-weight: 900;
+}
+/* Start Page */
+
+/* Start Box Log IN */
+.page .box-log-in{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 2px 1px 16px 0px #eee;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+@media (max-width:970px) {
+    .box-log-in{
+        flex-direction: column;
+    }
+}
+/* End Box Log IN */
+
+/* Start Image */
+.image img{
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+/* End Image */
+
+/* Start Form */
+form{
+    color: #818587;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: left;
+    padding: 35px 90px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+form div:not(div .buttons, .male,.female) {
+    display: flex;
+    justify-content: space-between;
+}
+    form span{
+    display: inline;
+    padding-right: 50px;
+}
+form input:not([type= "submit"]){
+    background-color: #FCFCFD;
+    padding: 8px 15px;
+    color: #C8D3DC;
+    outline: none;
+    border: 3px solid #DFE7EA;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+form input:not([type= "submit"])::selection{
+    background-color: rgb(248, 190, 231);
+}
+form input:hover{
+    caret-color: purple;
+}
+.gender i {
+    font-weight: 900;
+    color: #DFE7EA;
+    background-color: #FCFCFD;
+    padding: 15px;
+    border-radius: 50%;
+    margin: auto;
+}
+.gender i:hover{
+    background-color: #95EB75;
+    color: #ffff;
+    cursor: pointer;
+}
+form .subscription ul {
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0px;
+}
+form .subscription ul li:not(.last-li) {
+text-align: center;
+}
+form ul li a{
+    margin: 0px 16px;
+}
+form .buttons{
+    display: flex;
+    /* margin: 0px  auto; */
+    font-size: 12px;
+    justify-content: flex-end;
+}
+form input[type="submit"] {
+    background-color: #95EB75;
+    color: #ffff;
+    padding: 11px 33px;
+}
+form input[type= "submit"]:hover{
+    cursor: pointer;
+    color: #95EB75;
+    background-color: white;
+    border: 2px solid #95EB75;
+}
+form input[type= "submit"], form .buttons button{
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+form .buttons button{
+    padding: 11px 33px;
+    background-color: #F5F8F9;
+    color: #818587;
+    margin-right: 5px;
+}
+form ul .bronze{
+    color: #FBB03B;
+}
+form ul .silver{
+    color: #998675;
+}
+/* End Form */
+/* End Page */
+
+/* Start Media */
+@media (max-width:991px) {
+    .box-log-in{
+    width: 90%;
+    flex-direction: column;
+    margin: 10px auto;
+    }
+.image , .image img{
+    border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -ms-border-radius: 15px 15px 0px 0px;
+    -o-border-radius: 15px 15px 0px 0px;
+}
+    .image img{
+        width: 105%;
+        min-height: 500px;
+        height: 600px;
+}
+form div:not(div .buttons,.gender,.male,.female)
+        {        text-align: center;
+        display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.gender{
+    display: block;
+    text-align: end;
+}
+.gender .icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+form div span{
+padding-right: 0px;
+margin-right: 0px;
+margin-bottom: 25px;
+}
+.gender i{
+    width: fit-content;
+    display: inline;
+    margin: 0px;
+}
+.gender label{
+    display: inline;
+    text-align: center;
+    margin-left: 15px;
+}
+
+}
+@media (max-width: 640px) {
+    form div:not(div .buttons,.gender, .male, .female)
+    {
+    display: flex;
+    flex-direction: column;
+}
+.gender span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gender{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+.gender .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.gender .icons i ,  .icons label{
+    display: block;
+    margin: 12px auto!important;
+}
+form .subscription ul{
+    justify-content: center;
+}
+form .buttons{
+    justify-content: center;
+}
+}
+/* End Media */
